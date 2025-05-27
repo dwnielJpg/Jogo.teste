@@ -3,8 +3,11 @@ self.C3_GetObjectRefTable = function () {
 	return [
 		C3.Plugins.Sprite,
 		C3.Behaviors.Platform,
+		C3.Behaviors.bound,
 		C3.Behaviors.solid,
 		C3.Behaviors.Orbit,
+		C3.Plugins.TiledBg,
+		C3.Plugins.Text,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.System.Acts.Scroll,
 		C3.Plugins.Sprite.Exps.X,
@@ -21,6 +24,7 @@ self.C3_GetObjectRefTable = function () {
 };
 self.C3_JsPropNameTable = [
 	{Plataforma: 0},
+	{RestritoAoLayout: 0},
 	{boneco: 0},
 	{Sólido: 0},
 	{lava: 0},
@@ -29,7 +33,10 @@ self.C3_JsPropNameTable = [
 	{obstaculo: 0},
 	{moedas: 0},
 	{PORTA: 0},
-	{trofeu: 0}
+	{trofeu: 0},
+	{pngclipartbrownbricknewsupermariobros2newsupermariobros23ddesignwallbackgroundanglebrownthumbnail: 0},
+	{fundo: 0},
+	{vitoria: 0}
 ];
 
 self.InstanceType = {
@@ -39,5 +46,8 @@ self.InstanceType = {
 	obstaculo: class extends self.ISpriteInstance {},
 	moedas: class extends self.ISpriteInstance {},
 	PORTA: class extends self.ISpriteInstance {},
-	trofeu: class extends self.ISpriteInstance {}
+	trofeu: class extends self.ISpriteInstance {},
+	pngclipartbrownbricknewsupermariobros2newsupermariobros23ddesignwallbackgroundanglebrownthumbnail: class extends self.ISpriteInstance {},
+	fundo: class extends self.ITiledBackgroundInstance {},
+	vitoria: class extends self.ITextInstance {}
 }
